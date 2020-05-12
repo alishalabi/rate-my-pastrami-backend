@@ -5,7 +5,8 @@ const app = express()
 const port = 4000
 
 // Controllers
-require('./controllers/random-pastrami.js')(app)
+require('./controllers/pastrami/pastrami-random.js')(app)
+require('./controllers/pastrami/pastrami-search.js')(app)
 
 app.get('/', (req, res) => {
   res.json("Welcome to the Rate My Pastrami API :D")

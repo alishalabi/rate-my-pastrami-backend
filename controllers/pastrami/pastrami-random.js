@@ -6,6 +6,9 @@ module.exports = app => {
     const apiInstance = new ApiWrapper(process.env.API_KEY, "pastrami", req.params.zip)
     apiInstance.getRandom().then((json) => {
       res.json(json)
-    }).catch(console.log("Error"))
+    }).catch((err) => {
+      console.log(err)
+    })
   })
+
 }
